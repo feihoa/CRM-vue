@@ -1,5 +1,13 @@
 # crm-vue
 
+**vue ui**
+**vuex**
+**router**
+**sass**
+**pwa**
+**eslint**
+**prettier**
+
 ## Project setup
 ```
 npm install
