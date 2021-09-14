@@ -7,6 +7,7 @@
 **sass**
 **pwa**
 **Material Design** 
+**Firebase**
 **eslint**
 **prettier**
 
