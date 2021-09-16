@@ -1,10 +1,13 @@
 # crm-vue
 
+**vue 2**
 **vue ui**
 **vuex**
 **router**
 **sass**
 **pwa**
+**Material Design** 
+**Firebase**
 **eslint**
 **prettier**
 
