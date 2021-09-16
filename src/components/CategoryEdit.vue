@@ -71,7 +71,7 @@ export default {
     }),
     validations: {
         title: {required},
-        limit: {minValue: minValue(1)}
+        limit: {minValue: minValue(100)}
     },
     mounted(){
         this.select = M.FormSelect.init(this.$refs.select)
