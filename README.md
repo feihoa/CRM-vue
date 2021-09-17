@@ -8,6 +8,8 @@
 **pwa**
 **Material Design** 
 **Firebase**
+**lodash**
+**vue-chartjs**
 **eslint**
 **prettier**
 

@@ -1,21 +1,26 @@
 <template>
-<div>
-  <Loader v-if="loading" />
-  <div v-else class="app-main-layout">
-    <Navbar @click.prevent="isOpen = !isOpen" />
-    <Sidebar v-model="isOpen" />
-    <main class="app-content" :class="{ full: !isOpen }">
-      <div class="app-page">
-        <router-view />
-      </div>
-    </main>
+  <div>
+    <Loader v-if="loading" />
+    <div v-else class="app-main-layout">
+      <Navbar @click.prevent="isOpen = !isOpen" />
+      <Sidebar v-model="isOpen" />
+      <main class="app-content" :class="{ full: !isOpen }">
+        <div class="app-page">
+          <router-view />
+        </div>
+      </main>
 
-    <div class="fixed-action-btn">
-      <router-link class="btn-floating btn-large blue" to="/record" v-toolTip="'Создать новую запись'" data-position="left">
-        <i class="large material-icons">add</i>
-      </router-link>
+      <div class="fixed-action-btn">
+        <router-link
+          class="btn-floating btn-large blue"
+          to="/record"
+          v-toolTip="'Создать новую запись'"
+          data-position="left"
+        >
+          <i class="large material-icons">add</i>
+        </router-link>
+      </div>
     </div>
-  </div>
   </div>
 </template>
 
@@ -28,19 +33,19 @@ export default {
   name: "main-layout",
   data: () => ({
     isOpen: true,
-    loading: true
+    loading: true,
   }),
-  async mounted(){
-    if(!Object.keys(this.$store.getters.info).length){
-      await this.$store.dispatch('fetchInfo')
+  async mounted() {
+    if (!Object.keys(this.$store.getters.info).length) {
+      await this.$store.dispatch("fetchInfo");
     }
-    this.loading = false
+    this.loading = false;
   },
   components: {
     Navbar,
     Sidebar,
   },
-   computed: {
+  computed: {
     error() {
       return this.$store.getters.error;
     },

@@ -2,7 +2,7 @@ export default function dateFilter(value, format = "date") {
   const options = {};
 
   if (format.includes("date")) {
-    options.date = "2-digit";
+    options.day = "2-digit";
     options.month = "long";
     options.year = "numeric";
   }
