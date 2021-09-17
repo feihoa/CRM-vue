@@ -3,11 +3,11 @@
     <thead>
       <tr>
         <th>#</th>
-        <th>Сумма</th>
-        <th>Дата</th>
-        <th>Категория</th>
-        <th>Тип</th>
-        <th>Открыть</th>
+        <th>{{'Sum' | localize}}</th>
+        <th>{{'Date' | localize}}</th>
+        <th>{{'Category' | localize}}</th>
+        <th>{{'Type'| localize}}</th>
+        <th>{{'Open' | localize}}</th>
       </tr>
     </thead>
 
@@ -25,7 +25,7 @@
         <td>
           <button
             class="btn-small btn"
-            v-toolTip="'Детали'"
+            v-toolTip="details"
             data-position="top"
             @click="$router.push('/detail/' + rec.id)"
           >
@@ -38,12 +38,19 @@
 </template>
 
 <script>
+import localizeFilter from '@/filters/localize.filter'
+
 export default {
+
   props: {
     records: {
       type: Array,
       required: true,
     },
   },
+    data: () => ({
+    details:localizeFilter('Details')
+  }),
+
 };
 </script>

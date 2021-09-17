@@ -3,7 +3,7 @@
     <Loader v-if="loading" />
     <div v-else class="app-main-layout">
       <Navbar @click.prevent="isOpen = !isOpen" />
-      <Sidebar v-model="isOpen" />
+      <Sidebar v-model="isOpen" :key="locale"/>
       <main class="app-content" :class="{ full: !isOpen }">
         <div class="app-page">
           <router-view />
@@ -28,6 +28,7 @@
 import Navbar from "@/components/app/Navbar.vue";
 import Sidebar from "@/components/app/Sidebar.vue";
 import messages from "@/utils/messages";
+import localizeFilter from '@/filters/localize.filter'
 
 export default {
   name: "main-layout",
@@ -49,10 +50,13 @@ export default {
     error() {
       return this.$store.getters.error;
     },
+    locale(){
+      return this.$store.getters.info.locale
+    }
   },
   watch: {
     error(fbError) {
-      this.$error(messages[fbError.code] || "Что-то пошло не так");
+      this.$error(messages[fbError.code] || localizeFilter("Smth_WentWrong"));
     },
   },
 };
