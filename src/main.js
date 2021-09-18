@@ -4,6 +4,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import messagePlugin from "@/utils/message.plugin.js";
+import titlePlugin from "@/utils/title.plugin.js";
 import "./registerServiceWorker";
 import Loader from "@/components/app/Loader";
 import dateFilter from "@/filters/date.filter";
@@ -12,6 +13,7 @@ import localizeFilter from "@/filters/localize.filter";
 import tooltipDirective from "@/directives/tooltip.directive.js";
 import "materialize-css/dist/js/materialize.min";
 import Paginate from "vuejs-paginate";
+import VueMeta from "vue-meta";
 
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
@@ -27,6 +29,8 @@ Vue.filter("localize", localizeFilter);
 Vue.component("Loader", Loader);
 Vue.directive("toolTip", tooltipDirective);
 Vue.component("Paginate", Paginate);
+Vue.use(VueMeta);
+Vue.use(titlePlugin);
 
 firebase.initializeApp({
   apiKey: "AIzaSyBNW082Ff6sl6UOd5Y8uP7bJ0t34QUP17o",

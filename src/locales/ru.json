@@ -49,7 +49,38 @@
     "Record_Created":"Запись успешно создана",
     "Insufficient_Funds":"Недостаточно средств на счете",
     "Profile":"Профиль",
-    "Log_Out":"Выйти"
+    "Log_Out":"Выйти",
+    "Home":"Главная",
+    "Login":"Войти",
+    "Register":"Зарегистрироваться",
+    "Home_Book":"Домашняя бухгалтерия",
+    "EmailEmpty_Err":"Поле email не должно быть пустым",
+    "NotEmail_Err":"Введите корректный email",
+    "Password":"Пароль",
+    "Enter_Password":"Введите пароль",
+    "PasswordLength_Err":"Пароль должен быть более",
+    "Symbols.Now":"символов. Сейчас он",
+    "No_Account":"Нет аккаунта?",
+    "Agreed_Rules":"С правилами согласен",
+    "Have_Account":"Уже есть аккаунт?",
+    "Enter":"Войти",
+    "Logged_Out":"Вы вышли из системы",
+    "Error":"Ошибка",
+    "Login_first":"Для начала войдите в систему",
+    "Email_NotExists":"Пользователя с таким email не существует",
+    "Wrong_Password":"Неверный пароль",
+    "Email_Exists":"Такой email уже используется"
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -3,11 +3,11 @@
     <thead>
       <tr>
         <th>#</th>
-        <th>{{'Sum' | localize}}</th>
-        <th>{{'Date' | localize}}</th>
-        <th>{{'Category' | localize}}</th>
-        <th>{{'Type'| localize}}</th>
-        <th>{{'Open' | localize}}</th>
+        <th>{{ "Sum" | localize }}</th>
+        <th>{{ "Date" | localize }}</th>
+        <th>{{ "Category" | localize }}</th>
+        <th>{{ "Type" | localize }}</th>
+        <th>{{ "Open" | localize }}</th>
       </tr>
     </thead>
 
@@ -38,19 +38,17 @@
 </template>
 
 <script>
-import localizeFilter from '@/filters/localize.filter'
+import localizeFilter from "@/filters/localize.filter";
 
 export default {
-
   props: {
     records: {
       type: Array,
       required: true,
     },
   },
-    data: () => ({
-    details:localizeFilter('Details')
+  data: () => ({
+    details: localizeFilter("Details"),
   }),
-
 };
 </script>

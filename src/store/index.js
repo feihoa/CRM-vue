@@ -4,6 +4,7 @@ import auth from "./auth";
 import info from "./info";
 import category from "./category";
 import record from "./record";
+import rates from "../../rates.json";
 
 Vue.use(Vuex);
 
@@ -22,11 +23,18 @@ export default new Vuex.Store({
   actions: {
     async fetchCurrency() {
       const key = process.env.VUE_APP_FIXER;
-      const res = await fetch(
+      try{
+        let res = await fetch(
         `http://data.fixer.io/api/latest?access_key=${key}&symbols=USD,EUR,RUB`
       );
-      return await res.json();
-    },
+        res = await res.json();
+      res =  res.success ? res :rates
+      return res;
+    }catch(e){
+      console.log(rates)
+      return rates;
+    }
+  }
   },
   getters: {
     error: (s) => s.error,

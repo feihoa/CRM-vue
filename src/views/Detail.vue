@@ -3,7 +3,9 @@
     <Loader v-if="loading" />
     <div v-else-if="record">
       <div class="breadcrumb-wrap">
-        <router-link to="/history" class="breadcrumb">{{'History'|localize}}</router-link>
+        <router-link to="/history" class="breadcrumb">{{
+          "History" | localize
+        }}</router-link>
         <a click.prevent class="breadcrumb">
           {{ record.type === "income" ? income : outcome }}
         </a>
@@ -18,9 +20,9 @@
             }"
           >
             <div class="card-content white-text">
-              <p>{{'Description'|localize}}: {{ record.description }}</p>
-              <p>{{"Sum"|localize}}: {{ record.amount | currency }}</p>
-              <p>{{"Category"|localize}}: {{ record.categoryName }}</p>
+              <p>{{ "Description" | localize }}: {{ record.description }}</p>
+              <p>{{ "Sum" | localize }}: {{ record.amount | currency }}</p>
+              <p>{{ "Category" | localize }}: {{ record.categoryName }}</p>
 
               <small>{{ record.date | date("datetime") }}</small>
             </div>
@@ -28,37 +30,46 @@
         </div>
       </div>
     </div>
-    <p class="center" v-else>{{'RecordId_NotFound'|localize}} {{ $route.params.id }} </p>
+    <p class="center" v-else>
+      {{ "RecordId_NotFound" | localize }} {{ $route.params.id }}
+    </p>
   </div>
 </template>
 
 <script>
-import localizeFilter from '@/filters/localize.filter'
+import localizeFilter from "@/filters/localize.filter";
 
 export default {
   name: "Detail",
+  metaInfo() {
+    return {
+      title: this.$title("Details"),
+    };
+  },
   data: () => ({
     record: null,
     loading: true,
-    outcome: '',
-    income: ''
+    outcome: "",
+    income: "",
   }),
 
   async mounted() {
-    this.outcome = localizeFilter('Outcome')
-    this.income = localizeFilter('Income')
+    this.outcome = localizeFilter("Outcome");
+    this.income = localizeFilter("Income");
     const id = this.$route.params.id;
     let record = await this.$store.dispatch("fetchRecordById", id);
-    record = record.length > 1 ? record : null
-    if(record){
-    const category = await this.$store.dispatch(
-      "fetchCategoryById",
-      record.categoryId 
-    );
-    this.record = {
-      ...record,
-      categoryName: category.title,
-    };}
+    console.log(record);
+    record = record.date ? record : null;
+    if (record) {
+      const category = await this.$store.dispatch(
+        "fetchCategoryById",
+        record.categoryId
+      );
+      this.record = {
+        ...record,
+        categoryName: category.title,
+      };
+    }
     this.loading = false;
   },
 };

@@ -6,7 +6,7 @@
 
 <script>
 import messages from "@/utils/messages";
-import localizeFilter from '@/filters/localize.filter'
+import localizeFilter from "@/filters/localize.filter";
 
 export default {
   computed: {
