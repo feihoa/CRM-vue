@@ -29,7 +29,7 @@
     "Back":"Back",
     "Forward":"Forward",
     "Details":"Details",
-    "Funds_ForeinCurrency":"Amount of funds in foreign currency",
+    "Funds_ForeinCurrency":"Bill in curruncies",
     "Exchange_Rates":"Exchange Rates",
     "Currency":"Currency",
     "Rates":"Rates",
@@ -49,7 +49,30 @@
     "Record_Created":"Record created successfully",
     "Insufficient_Funds":"Insufficient funds",
     "Profile":"Profile",
-    "Log_Out":"Log Out"
+    "Log_Out":"Log Out",
+    "Home":"Home",
+    "Login":"Login",
+    "Register":"Register",
+    "Home_Book":"Home bookkeeping",
+    "EmailEmpty_Err":"The email field must not be empty",
+    "NotEmail_Err":"Please enter a valid email",
+    "Password":"Password",
+    "Enter_Password":"Enter_Password",
+    "PasswordLength_Err":"Password must be more than",
+    "Symbols.Now":"symbols. Now it is",
+    "No_Account":"Do not have account?",
+    "Agreed_Rules":"I agree with the rules",
+    "Have_Account":"Already have an account?",
+    "Enter":"Enter",
+    "Logged_Out":"You are logged out",
+    "Error":"Error",
+    "Login_first":"First, log in",
+    "Email_NotExists":"User with this email does not exist",
+    "Wrong_Password":"Wrong password",
+    "Email_Exists":"This email is already in use"
+
+
+
 
 
 

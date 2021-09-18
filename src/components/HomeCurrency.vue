@@ -3,14 +3,14 @@
     <div class="card orange darken-3 bill-card">
       <div class="card-content white-text">
         <div class="card-header">
-          <span class="card-title">{{"Exchange_Rates"|localize}}</span>
+          <span class="card-title">{{ "Exchange_Rates" | localize }}</span>
         </div>
         <table>
           <thead>
             <tr>
-              <th>{{"Currency"|localize}}</th>
-              <th>{{'Rates'|localize}}</th>
-              <th>{{"Date"|localize}}</th>
+              <th>{{ "Currency" | localize }}</th>
+              <th>{{ "Rates" | localize }}</th>
+              <th>{{ "Date" | localize }}</th>
             </tr>
           </thead>
 

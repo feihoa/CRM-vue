@@ -5,17 +5,20 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": " gh-pages -d dist"
   },
   "dependencies": {
     "chart.js": "^2.5.1",
     "core-js": "^3.6.5",
     "firebase": "^9.0.2",
+    "gh-pages": "^3.2.3",
     "lodash": "^4.17.21",
     "materialize-css": "^1.0.0-rc.2",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-chartjs": "^3.5.1",
+    "vue-meta": "^2.4.0",
     "vue-router": "^3.2.0",
     "vuejs-paginate": "^2.1.0",
     "vuelidate": "^0.7.6",

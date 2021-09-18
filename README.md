@@ -1,5 +1,8 @@
 # crm-vue
 
+## https://feihoa.github.io/CRM-vue
+
+
 **vue 2**
 **vue ui**
 **vuex**
@@ -10,6 +13,7 @@
 **Firebase**
 **lodash**
 **vue-chartjs**
+**vue-meta**
 **eslint**
 **prettier**
 

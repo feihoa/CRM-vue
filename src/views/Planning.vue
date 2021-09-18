@@ -1,21 +1,24 @@
 <template>
   <div>
     <div class="page-title">
-      <h3>{{'Planning'|localize}}</h3>
+      <h3>{{ "Planning" | localize }}</h3>
       <h4>{{ info.bill | currency("RUB") }}</h4>
     </div>
     <Loader v-if="loading" />
 
     <p v-else-if="!categories.length" class="center">
-      {{'No_Categories'|localize}}
-      <router-link to="/categories">{{'Add_Category'|localize}}</router-link>
+      {{ "No_Categories" | localize }}
+      <router-link to="/categories">{{
+        "Add_Category" | localize
+      }}</router-link>
     </p>
 
     <section v-else>
       <div v-for="cat of categories" :key="cat.id">
         <p>
           <strong>{{ cat.title }}</strong>
-          {{ cat.spend | currency }} {{'From'|localize}} {{ cat.limit | currency }}
+          {{ cat.spend | currency }} {{ "From" | localize }}
+          {{ cat.limit | currency }}
         </p>
         <div class="progress" v-toolTip="cat.tooltip">
           <div
@@ -32,15 +35,20 @@
 <script>
 import { mapGetters } from "vuex";
 import currencyFilter from "@/filters/currency.filter";
-import localizeFilter from '@/filters/localize.filter'
+import localizeFilter from "@/filters/localize.filter";
 
 export default {
   name: "planning",
+  metaInfo() {
+    return {
+      title: this.$title("Planning"),
+    };
+  },
   data: () => ({
     loading: true,
     categories: [],
-    over: localizeFilter('Over'),
-    left:localizeFilter('Left')
+    over: localizeFilter("Over"),
+    left: localizeFilter("Left"),
   }),
   computed: {
     ...mapGetters(["info"]),
