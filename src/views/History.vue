@@ -32,6 +32,7 @@ import paginationMixin from "@/mixins/pagination.mixin.js";
 import HistoryTable from "@/components/HistoryTable";
 import { Pie } from "vue-chartjs";
 import localizeFilter from "@/filters/localize.filter";
+import ratesLocal from "../../rates.json";
 
 export default {
   name: "history",
@@ -51,7 +52,7 @@ export default {
     HistoryTable,
   },
   async mounted() {
-    this.records = await this.$store.dispatch("fetchRecords");
+    this.records = await this.$store.dispatch("fetchRecords") 
     const categories = await this.$store.dispatch("fetchCategories");
     this.setup(categories);
 

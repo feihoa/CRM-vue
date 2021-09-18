@@ -3,19 +3,19 @@
 ## https://feihoa.github.io/CRM-vue
 
 
-**vue 2**
-**vue ui**
-**vuex**
-**router**
-**sass**
-**pwa**
-**Material Design** 
-**Firebase**
-**lodash**
-**vue-chartjs**
-**vue-meta**
-**eslint**
-**prettier**
+**-vue 2**
+**-vue ui**
+**-vuex**
+**-router**
+**-sass**
+**-pwa**
+**-Material Design** 
+**-Firebase**
+**-lodash**
+**-vue-chartjs**
+**-vue-meta**
+**-eslint**
+**-prettier**
 
 ## Project setup
 ```
