@@ -1,0 +1,61 @@
+{
+    "ProfileTitle": "Profile",
+    "Message_EnterName": "Enter name",
+    "Name":"Name",
+    "Update": "Update",
+    "Bill": "Bill",
+    "History": "History",
+    "Menu_Planning": "Planning",
+    "NewRecord": "New record",
+    "Categories": "Categories",
+    "No_Categories" : "No categories yet",
+    "Title":"Title",
+    "Create":"Create",
+    "Enter_CategoryName":"Enter category name",
+    "Limit":"Limit",
+    "Min_Value":"Minimum value is",
+    "Edit":"Edit",
+    "Choose_Category": "Choose category",
+    "Updated_Successfully": "Category has been updated successfully",
+    "Category_Created":"Category has been created successfully",
+    "Sum":"Sum",
+    "Date":"Date",
+    "Category":"Category",
+    "Type":"Type",
+    "Open":"Open",
+    "Record_History":"Record History",
+    "No_Records": "No records yet",
+    "Add_NewRecord":"Add new record",
+    "Back":"Back",
+    "Forward":"Forward",
+    "Details":"Details",
+    "Funds_ForeinCurrency":"Amount of funds in foreign currency",
+    "Exchange_Rates":"Exchange Rates",
+    "Currency":"Currency",
+    "Rates":"Rates",
+    "Smth_WentWrong":"Something went wrong",
+    "Income":"Income",
+    "Outcome":"Outcome",
+    "Description":"Description",
+    "RecordId_NotFound":"No records found with id =",
+    "Spent_ByCategory":"Expenses by category",
+    "Planning":"Planning",
+    "Add_Category":"Add category",
+    "From":"from",
+    "Over":"Excess by:",
+    "Left":"Left:",
+    "NotEnoughSymbols":"Not enough symbols",
+    "Enter_Description":"Enter description",
+    "Record_Created":"Record created successfully",
+    "Insufficient_Funds":"Insufficient funds",
+    "Profile":"Profile",
+    "Log_Out":"Log Out"
+
+
+
+
+
+
+
+
+}

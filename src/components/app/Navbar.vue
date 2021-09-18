@@ -16,20 +16,20 @@
             data-target="dropdown"
             ref="dropdown"
           >
-            {{name}}
+            {{ name }}
             <i class="material-icons right">arrow_drop_down</i>
           </a>
 
           <ul id="dropdown" class="dropdown-content">
             <li>
               <router-link to="/profile" class="black-text">
-                <i class="material-icons">account_circle</i>Профиль
+                <i class="material-icons">account_circle</i>{{'Profile'|localize}}
               </router-link>
             </li>
             <li class="divider" tabindex="-1"></li>
             <li>
               <a href="#" class="black-text" v-on:click.stop="logout">
-                <i class="material-icons">assignment_return</i>Выйти
+                <i class="material-icons">assignment_return</i>{{'Log_Out'|localize}}
               </a>
             </li>
           </ul>
@@ -47,14 +47,14 @@ export default {
     dropdown: null,
   }),
   mounted() {
-
     this.interval = setInterval(() => {
       this.date = new Date();
     }, 1000);
-    try{
+    try {
       this.dropdown = M.Dropdown.init(this.$refs.dropdown, {
-      constrainWidth: false,
-    })}catch(e){}
+        constrainWidth: false,
+      });
+    } catch (e) {}
   },
   beforeDestroy() {
     clearInterval(this.interval);
@@ -62,10 +62,10 @@ export default {
       this.dropdown.destroy();
     }
   },
-  computed:{
-    name(){
-      return this.$store.getters.info.name
-    }
+  computed: {
+    name() {
+      return this.$store.getters.info.name;
+    },
   },
   methods: {
     async logout() {

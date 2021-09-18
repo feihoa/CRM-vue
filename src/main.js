@@ -5,11 +5,13 @@ import router from "./router";
 import store from "./store";
 import messagePlugin from "@/utils/message.plugin.js";
 import "./registerServiceWorker";
-import Loader from '@/components/app/Loader'
+import Loader from "@/components/app/Loader";
 import dateFilter from "@/filters/date.filter";
 import currencyFilter from "@/filters/currency.filter";
+import localizeFilter from "@/filters/localize.filter";
 import tooltipDirective from "@/directives/tooltip.directive.js";
 import "materialize-css/dist/js/materialize.min";
+import Paginate from "vuejs-paginate";
 
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
@@ -21,10 +23,12 @@ Vue.use(messagePlugin);
 Vue.use(Vuelidate);
 Vue.filter("date", dateFilter);
 Vue.filter("currency", currencyFilter);
-Vue.component('Loader', Loader)
-Vue.directive('toolTip', tooltipDirective)
+Vue.filter("localize", localizeFilter);
+Vue.component("Loader", Loader);
+Vue.directive("toolTip", tooltipDirective);
+Vue.component("Paginate", Paginate);
 
-firebase.initializeApp ({
+firebase.initializeApp({
   apiKey: "AIzaSyBNW082Ff6sl6UOd5Y8uP7bJ0t34QUP17o",
   authDomain: "crm-vue-947e0.firebaseapp.com",
   projectId: "crm-vue-947e0",
@@ -34,16 +38,14 @@ firebase.initializeApp ({
   measurementId: "G-95P0N1DSRY",
 });
 
-
 let app;
 
 firebase.auth().onAuthStateChanged(() => {
   if (!app) {
-    app =  new Vue({
+    app = new Vue({
       router,
       store,
       render: (h) => h(App),
     }).$mount("#app");
   }
 });
-
