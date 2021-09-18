@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "75dbc8a2ded4c1f92104",
+    "revision": "5dd7ab25086108f64c84",
     "url": "/CRM-vue/css/app.4cd6f013.css"
   },
   {
@@ -12,12 +12,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CRM-vue/css/chunk-vendors.24ce4a6c.css"
   },
   {
-    "revision": "b328a6ce315ded65f28bc18346101296",
+    "revision": "1ec780bd40777f29595288bc3f61adff",
     "url": "/CRM-vue/index.html"
   },
   {
-    "revision": "75dbc8a2ded4c1f92104",
-    "url": "/CRM-vue/js/app.d3d03bdf.js"
+    "revision": "5dd7ab25086108f64c84",
+    "url": "/CRM-vue/js/app.31b44c22.js"
   },
   {
     "revision": "04ec1ffe76e7ef8f964d",
